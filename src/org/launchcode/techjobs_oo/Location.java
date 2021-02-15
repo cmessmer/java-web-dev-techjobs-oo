@@ -13,7 +13,7 @@ public class Location {
     }
 
     public Location (String value){
-        this.();
+        this();
         this.value= value;
     }
 
