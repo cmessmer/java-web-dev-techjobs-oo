@@ -60,6 +60,29 @@ public class JobTest {
 
       assertFalse(job1.equals(job2));
    }
+
+   @Test
+   public void testToString() {
+      Job job1 = new Job("Product tester", new Employer("ACME"),new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+      int afterJobInfo = (job1.toString().length()-1);
+
+      assertTrue(job1.toString().charAt(0) == '\n');
+      assertTrue(job1.toString().charAt(afterJobInfo) == '\n');
+   }
+   @Test
+
+   public void toStringPrint() {
+      Job job1 = new Job("Product tester", new Employer("ACME"),new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+      String[] lines = job1.toString().trim().split("\n");
+
+      System.out.println(job1.toString());
+      assertTrue(lines.length == 1);
+
+
+
+
+   }
 }
 
 
